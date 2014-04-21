@@ -122,6 +122,10 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self];
 
+    if (![_delegate respondsToSelector:@selector(userClickedOnLinePoint:lineIndex:)]) {
+        return;
+    }
+    
     for (int p = _pathPoints.count - 1; p >= 0; p--) {
         NSArray *linePointsArray = _pathPoints[p];
 
@@ -154,6 +158,10 @@
     //Get the point user touched
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self];
+    
+    if (![_delegate respondsToSelector:@selector(userClickedOnLineKeyPoint:lineIndex:andPointIndex:)]) {
+        return;
+    }
 
     for (int p = _pathPoints.count - 1; p >= 0; p--) {
         NSArray *linePointsArray = _pathPoints[p];

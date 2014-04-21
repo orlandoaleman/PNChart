@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
 @protocol PNChartDelegate <NSObject>
+
+@optional
 
 /**
  * When user click on the chart line
