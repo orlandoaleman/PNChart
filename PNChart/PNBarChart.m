@@ -33,6 +33,7 @@
         _barBackgroundColor  = PNLightGrey;
         _labels              = [NSMutableArray array];
         _bars                = [NSMutableArray array];
+        _minValueForYLabel   = 5;
     }
 
     return self;
@@ -61,8 +62,8 @@
     }
 
     //Min value for Y label
-    if (max < 5) {
-        max = 5;
+    if (max < _minValueForYLabel) {
+        max = _minValueForYLabel;
     }
 
     _yValueMax = (int)max;

@@ -32,6 +32,7 @@
 @property (nonatomic) NSArray *strokeColors;
 @property (nonatomic) UIColor *barBackgroundColor;
 @property (nonatomic) BOOL showLabel;
+@property (nonatomic) NSInteger minValueForYLabel;
 
 @property (nonatomic, retain) id<PNChartDelegate> delegate;
 @end
